@@ -1,0 +1,25 @@
+function translatePigLatin(str) {
+  let vowel = /^[aeiou]/;
+  let hasVowel = str.match(/[aeiou]/gi);
+  
+  if (hasVowel) {
+    if (vowel.test(str)) {
+      return str + 'way';
+    }
+    str = str.split('');
+    while (!vowel.test(str)) {
+      str.push(str.shift());
+    }
+    str = str.join('');
+  }
+  return str + 'ay';
+}
+
+translatePigLatin("consonant");
+translatePigLatin("california");
+translatePigLatin("paragraphs");
+translatePigLatin("glove");
+translatePigLatin("algorithm");
+translatePigLatin("eight");
+translatePigLatin("schwartz");
+translatePigLatin("rhythm");

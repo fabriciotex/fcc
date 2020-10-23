@@ -1,0 +1,8 @@
+function getIndexToIns(arr, num) {
+ arr.sort((a,b) => a > b);
+ let i = 0;
+ arr.forEach((elem, index) => num == elem ? i = index : num > elem ? i = index + 1 : i = i);
+ return i;
+}
+
+getIndexToIns([40, 60], 50);

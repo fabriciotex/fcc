@@ -1,0 +1,22 @@
+function addTogether() {
+  let args = [...arguments]
+  if(args.every(item => Number.isInteger(item))) {
+    if (args.length > 1) {
+      return args.reduce((sum, item) => sum += item);
+    } 
+    return function (x) {
+      if(Number.isInteger(x)) {
+        return args[0] + x;
+      }
+      return undefined;
+    }
+  }
+  return undefined;
+}
+
+addTogether(2,3);
+addTogether(23, 30);
+addTogether(5)(7);
+addTogether("http://bit.ly/IqT6zt");
+addTogether(2, "3");
+addTogether(2)([3]);

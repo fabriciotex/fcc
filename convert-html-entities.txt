@@ -1,0 +1,11 @@
+function convertHTML(str) {
+  return str.replace(/&/g,"&amp;").replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
+}
+
+convertHTML("Dolce & Gabbana");
+convertHTML("Hamburgers < Pizza < Tacos");
+convertHTML("Sixty > twelve");
+convertHTML('Stuff in "quotation marks"');
+convertHTML("Schindler's List");
+convertHTML("<>");
+convertHTML("abc");

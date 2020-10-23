@@ -1,0 +1,5 @@
+function pairElement(str) {
+  return str.split('').map(lm => lm == 'G' ? ['G', 'C'] : lm == 'C' ? ['C', 'G'] : lm == 'A' ? ['A', 'T'] : ['T', 'A']);
+}
+
+pairElement("GCG");

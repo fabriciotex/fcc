@@ -1,0 +1,9 @@
+function spinalCase(str) {
+  str = str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[\W_]/gi,"-").toLowerCase();
+  console.log(str);
+  return str;
+}
+
+spinalCase('This Is Spinal Tap');
+spinalCase("thisIsSpinalTap");
+spinalCase("TheAndyGriffith_Show");

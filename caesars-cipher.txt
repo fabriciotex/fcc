@@ -1,0 +1,12 @@
+function rot13(str) {
+  return str.split('')
+  .map(item => item.match(/\w/) ? item.charCodeAt(0) : item)
+  .map(item => Number.isInteger(item) ? item - 13 >= 65 ? item - 13 : item + 13 : item)
+  .map(item => Number.isInteger(item) ? String.fromCharCode(item) : item)
+  .join('');
+}
+
+rot13("SERR PBQR PNZC");
+rot13("SERR CVMMN!");
+rot13("SERR YBIR?");
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.");
